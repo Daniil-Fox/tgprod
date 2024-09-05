@@ -1,0 +1,91 @@
+.faq {
+  margin-bottom: 112px;
+  position: relative;
+  z-index: 2;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    width: 700px;
+    height: 700px;
+    background-image: url('./../img/spiral3.svg');
+    background-size: contain;
+    background-position: left center;
+    background-repeat: no-repeat;
+  }
+
+  &__title {
+    margin-bottom: 48px;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+}
+
+.faq-item {
+  &.active {
+    .faq-item__btn {
+      transform: rotate(45deg);
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #2c281f;
+    padding: 18px 36px;
+    border-radius: 20px;
+  }
+
+  &__btn {
+    flex-shrink: 0;
+    width: 62px;
+    height: 62px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform .3s ease-out;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    @include hover {
+      transform: rotate(45deg);
+    }
+  }
+
+  &__quest {
+    font-weight: 600;
+    color: #fff;
+  }
+
+  &__body {
+    box-sizing: content-box;
+    will-change: max-height;
+    transition: max-height .3s ease-out;
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  &__content {
+    border-radius: 20px;
+    padding: 18px 36px;
+    padding-right: 36px;
+    background-color: #fff;
+    margin-top: 10px;
+
+    p {
+      margin: 0;
+      max-width: 900px;
+    }
+  }
+}

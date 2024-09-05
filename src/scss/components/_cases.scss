@@ -1,0 +1,151 @@
+.cases {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 112px;
+
+  &__title {
+    margin-bottom: 48px;
+  }
+
+  &__slider {
+    .swiper-slide {
+      box-sizing: border-box;
+    }
+  }
+
+  &__desc {
+    margin: 0;
+    margin-bottom: 24px;
+    border-radius: 20px;
+    padding: 24px 36px;
+    background: #1badf6;
+    color: #fff;
+    max-width: 765px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      width: 750px;
+      height: 284px;
+      left: 90%;
+      bottom: 0;
+      background-image: url('./../img/line.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: left;
+    }
+  }
+}
+
+
+.case {
+  background: #2c281f;
+  padding: 48px 36px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 820px;
+    height: 1000px;
+    border-radius: 100%;
+
+  }
+
+  &::before {
+    z-index: 1;
+    bottom: 30%;
+    right: 0;
+    transform: translateX(20%);
+    background: linear-gradient(180deg, #aae1fc 0%, #1badf6 100%);
+  }
+
+  &::after {
+    z-index: 2;
+    background: linear-gradient(180deg, #0f87de 0%, #1badf6 100%);
+    top: 40px;
+    right: 0;
+    transform: translateX(50%);
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 28px;
+    position: relative;
+    z-index: 4;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-auto-rows: 1fr;
+    gap: 24px;
+  }
+
+  &__header {
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  &__img {
+    display: block;
+    width: 72px;
+    height: 72px;
+    border-radius: 100%;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__name {
+    font-weight: 600;
+    font-size: 24px;
+    color: #fff;
+  }
+
+  &__info {
+    color: #fff;
+
+    &:not(:last-child) {
+      margin-bottom: 18px;
+    }
+
+    span {
+      font-weight: 600;
+    }
+  }
+}
+
+.case-item {
+  background-color: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 100%;
+  max-height: 246px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__img {
+    padding: 25px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}

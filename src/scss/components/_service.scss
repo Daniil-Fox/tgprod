@@ -1,0 +1,114 @@
+.service {
+  padding-top: 40px;
+  position: relative;
+  margin-bottom: 112px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-40%);
+    width: 460px;
+    height: 700px;
+
+    background-image: url('./../img/spiral2.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+  }
+
+  &__title {
+    position: relative;
+    margin-bottom: 38px;
+    line-height: 1;
+
+    span {
+      display: inline-block;
+      transform: translateY(-10px);
+      padding: 12px 24px;
+      border-radius: 30px;
+      background: #2c281f;
+      font-weight: 600;
+      font-size: 20px;
+      color: #fff;
+    }
+  }
+
+  &__items {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  &__item {
+    &--long {
+      grid-column: 2 span;
+    }
+  }
+}
+
+.service-item {
+  padding: 48px 36px;
+  min-height: 470px;
+  background-color: #fff;
+  border-radius: 20px;
+
+  position: relative;
+
+  &:nth-child(3n + 1) {
+    background-image: url('./../img/blob.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: -27px;
+
+      width: 210px;
+      height: 210px;
+      background-image: url('./../img/rocket.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &:nth-child(3n + 3) {
+    &::after {
+      content: "";
+      position: absolute;
+      right: -48px;
+      top: -54px;
+
+      width: 247px;
+      height: 354px;
+      background-image: url('./../img/check-tg.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 64px;
+    font-weight: 600;
+    font-size: 32px;
+    color: #2c281f;
+  }
+
+  &__desc {
+    max-width: 862px;
+  }
+
+  &--long {
+    min-height: auto;
+    padding-right: 200px;
+  }
+}

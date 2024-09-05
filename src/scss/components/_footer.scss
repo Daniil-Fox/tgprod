@@ -1,0 +1,108 @@
+.footer {
+  padding: 60px 0 44px;
+  background: #2c281f;
+  border-radius: 20px 20px 0 0;
+
+  &__container {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    display: block;
+    margin-bottom: 12px;
+    width: 220px;
+    height: 80px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__col {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  &__tel {
+    font-weight: 600;
+    font-size: 40px;
+    color: #fff;
+  }
+
+  &__copy {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 160px;
+  }
+
+  &__email {
+    display: block;
+    margin-bottom: 10px;
+    color: #fff;
+    font-weight: 600;
+  }
+
+  &__socials {
+    display: flex;
+    gap: 26px;
+    justify-content: space-between;
+  }
+
+  &__link {
+    display: block;
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    background-color: #0A90F1;
+    padding: 8px;
+    border: 1px solid #0A90F1;
+
+    transition: .3s ease-out;
+
+    svg {
+      width: 100%;
+      height: 100%;
+      fill: #fff;
+      transition: fill .3s ease-out;
+    }
+
+    @include hover {
+      background-color: #fff;
+
+      svg {
+        fill: #0A90F1;
+      }
+    }
+  }
+}
+
+.footer-nav {
+  &__capture {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #fff;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 6px;
+    }
+  }
+
+  &__link {
+    color: #fff;
+  }
+}
