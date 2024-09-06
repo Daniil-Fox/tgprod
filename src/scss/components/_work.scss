@@ -2,8 +2,17 @@
   padding: 60px 0 90px;
   background: #2c281f;
 
+  @include tablet {
+    padding-bottom: 60px;
+  }
+
   &__title {
     margin-bottom: 48px;
+
+    @include small-tablet {
+      margin-bottom: 32px;
+    }
+
   }
 
   &__desc {
@@ -13,6 +22,15 @@
     span {
       font-weight: 700;
       font-size: 32px;
+
+      @include small-tablet {
+        font-size: 24px;
+        margin-bottom: 24px;
+      }
+
+      @include mobile {
+        font-size: 20px;
+      }
     }
   }
 
@@ -21,13 +39,29 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 22px 25px;
+
+    @include small-tablet {
+      display: block;
+    }
   }
 
   &__item {
+
+    @include small-tablet {
+      &:not(:last-child) {
+        margin-bottom: 24px;
+      }
+    }
+
     &--long {
       grid-column: 2 span;
       padding: 48px 36px !important;
       border: 4px solid #1badf6;
+
+      @include small-tablet {
+        padding: 0 !important;
+        border: none;
+      }
     }
   }
 }
@@ -41,13 +75,24 @@
   line-height: 100%;
   color: #fff;
   line-height: 1;
+  background-size: auto 100%;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+
+  @include small-tablet {
+    padding: 18px;
+    padding-top: 25px;
+    font-size: 48px;
+  }
 
   &:nth-child(3n + 1) {
-    background: #1badf6;
+    background-color: #1badf6;
+    background-image: url('./../img/work/01.webp');
   }
 
   &:nth-child(3n + 2) {
-    background: #0A90F1;
+    background-color: #0A90F1;
+    background-image: url('./../img/work/grid.svg');
   }
 
   span {
@@ -55,10 +100,19 @@
 
     &:nth-of-type(1) {
       font-size: 24px;
+      opacity: 0.8;
+
+      @include small-tablet {
+        font-size: 12px;
+      }
     }
 
     &:nth-of-type(2) {
       font-size: 32px;
+
+      @include small-tablet {
+        font-size: 16px;
+      }
     }
   }
 
@@ -73,45 +127,131 @@
       position: absolute;
 
       &:nth-child(1) {
-        left: 163px;
+        right: 333px;
         top: 20px;
         width: 56px;
         height: 56px;
+
+        @include tablet {
+          top: 13px;
+          right: 60%;
+          width: 49px;
+          height: 49px;
+        }
+
+        @include small-tablet {
+          width: 45px;
+          height: 45px;
+          top: 30px;
+          right: 45%;
+        }
       }
 
       &:nth-child(2) {
-        left: 234px;
+        right: 234px;
         top: 87px;
         width: 84px;
         height: 84px;
+
+        @include tablet {
+          width: 74px;
+          height: 74px;
+          right: 40%;
+          top: 90px;
+        }
+
+        @include small-tablet {
+          width: 46px;
+          height: 46px;
+          top: unset;
+          bottom: 3px;
+          right: 30%;
+        }
       }
 
       &:nth-child(3) {
-        left: 323px;
+        right: 129px;
         top: -20px;
         width: 100px;
         height: 100px;
+
+        @include tablet {
+          right: 28%;
+          top: -25px;
+          width: 88px;
+          height: 88px;
+        }
+
+        @include small-tablet {
+          width: 54px;
+          height: 54px;
+          top: 10px;
+          right: 26%;
+        }
       }
 
       &:nth-child(4) {
-        left: 369px;
+        right: 109px;
         bottom: 22px;
         width: 100px;
         height: 100px;
+
+        @include tablet {
+          bottom: 62px;
+          right: 17%;
+          width: 65px;
+          height: 65px;
+        }
+
+        @include small-tablet {
+          width: 39px;
+          height: 39px;
+          bottom: 13px;
+          right: 16%;
+        }
       }
 
       &:nth-child(5) {
-        left: 465px;
+        right: -27px;
         top: -27px;
         width: 114px;
         height: 114px;
+
+        @include tablet {
+          right: -10px;
+          top: -32px;
+          width: 100px;
+          height: 100px;
+        }
+
+        @include small-tablet {
+          width: 60px;
+          height: 60px;
+          right: -5px;
+          top: 10px;
+        }
       }
 
       &:nth-child(6) {
-        left: 476px;
+        right: 30px;
         top: 120px;
         width: 46px;
         height: 46px;
+
+        @include tablet {
+          right: 5%;
+          top: 96px;
+          width: 40px;
+          height: 40px;
+        }
+
+        @include small-tablet {
+          width: 30px;
+          height: 30px;
+          top: unset;
+          right: 8px;
+          bottom: 10px;
+        }
       }
     }
   }
@@ -120,6 +260,11 @@
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
+
+    @include small-tablet {
+      gap: 15px;
+      margin-top: 50px;
+    }
   }
 
   &__item {
@@ -133,5 +278,45 @@
     font-weight: 600;
     font-size: 24px;
     color: #2c281f;
+
+    @include tablet {
+      font-size: 20px;
+    }
+
+    @include small-tablet {
+      font-size: 14px;
+
+      &:nth-child(5n + 1) {
+        transform: rotate(2.4deg);
+        order: 0;
+      }
+
+      &:nth-child(5n + 2) {
+        transform: rotate(-4deg);
+        margin-left: auto;
+        order: 3;
+      }
+
+      &:nth-child(5n + 3) {
+        order: 1;
+        transform: rotate(2.4deg);
+        margin-left: 40px;
+        background-color: #0A90F1;
+        color: #fff;
+      }
+
+      &:nth-child(5n + 4) {
+        order: 2;
+        background-color: #CFEB6B;
+        transform: rotate(-2.5deg);
+      }
+
+      &:nth-child(5n + 5) {
+        order: 5;
+        transform: rotate(2.7deg);
+        background-color: #1BADF6;
+        color: #fff;
+      }
+    }
   }
 }

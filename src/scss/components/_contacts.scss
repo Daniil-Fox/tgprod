@@ -1,0 +1,125 @@
+.contacts {
+  margin-bottom: 65px;
+  position: relative;
+  z-index: 2;
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    bottom: 50%;
+    transform: translateY(50%);
+    height: 300%;
+    aspect-ratio: 1 / 1;
+
+    background-image: url('./../img/contacts-spiral.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+
+    @include tablet {
+      height: auto;
+      width: 140%;
+    }
+  }
+
+  &__container {
+    display: flex;
+    gap: 114px;
+    justify-content: space-between;
+
+    @include tablet {
+      gap: 20px;
+    }
+
+    @include small-tablet {
+      flex-direction: column;
+      gap: 32px;
+    }
+  }
+
+  &__content {
+    width: 100%;
+    max-width: 535px;
+
+    @include tablet {
+      max-width: 50%;
+    }
+
+    @include small-tablet {
+      max-width: 100%;
+    }
+  }
+
+  &__form {
+    width: 100%;
+
+    @include small-tablet {
+      max-width: 476px;
+    }
+
+    @include small-tablet {
+      max-width: 100%;
+    }
+  }
+
+  &__title,
+  &__desc {
+    margin-bottom: 22px;
+  }
+
+  &__desc {
+    font-size: 24px;
+
+    @include small-tablet {
+      font-size: 16px;
+    }
+  }
+
+  &__list {
+    margin-bottom: 16px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 24px;
+    color: #2c281f;
+
+    @include small-tablet {
+      font-size: 16px;
+    }
+
+    svg {
+      width: 45px;
+      height: 45px;
+      flex-shrink: 0;
+
+      @include small-tablet {
+        width: 25px;
+        height: 25px;
+      }
+    }
+
+    a {
+      color: inherit;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+
+      @include small-tablet {
+        margin-bottom: 12px;
+      }
+    }
+  }
+
+  .footer__socials {
+    justify-content: flex-start;
+  }
+}

@@ -5,6 +5,11 @@
     padding: 0 calc((100% - var(--container-width)) / 2);
     margin-bottom: 30px;
 
+    @include tablet {
+      padding: 0 24px;
+      margin-bottom: 24px;
+    }
+
     .swiper-slide {
       width: auto;
       box-sizing: border-box;
@@ -58,6 +63,30 @@
     font-size: 54px;
     text-transform: uppercase;
     color: #0a90f1;
+
+    @include tablet {
+      font-size: 48px;
+      max-width: 444px;
+    }
+
+    @include small-tablet {
+      font-size: 32px;
+      margin: 0 var(--container-offset);
+      margin-bottom: 32px;
+      display: none;
+    }
+
+    @include mobile {
+      font-size: 24px;
+    }
+
+    &--mob {
+      display: none !important;
+
+      @include small-tablet {
+        display: block !important;
+      }
+    }
   }
 
   &__item {
@@ -66,10 +95,22 @@
     display: flex;
     overflow: hidden;
     flex-direction: column;
+
+    @include tablet {
+      width: 310px;
+    }
+
+    @include small-tablet {
+      width: 280px;
+    }
   }
 
   &__img {
     height: 260px;
+
+    @include mobile {
+      height: 240px;
+    }
 
     img {
       width: 100%;
@@ -85,5 +126,15 @@
     font-weight: 600;
     font-size: 24px;
     color: #2c281f;
+
+    @include small-tablet {
+      font-size: 20px;
+    }
+
+    @include mobile {
+      padding: 26px 16px;
+      padding-right: 40px;
+      font-size: 16px;
+    }
   }
 }

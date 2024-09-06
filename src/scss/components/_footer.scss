@@ -2,11 +2,25 @@
   padding: 60px 0 44px;
   background: #2c281f;
   border-radius: 20px 20px 0 0;
+  position: relative;
+  z-index: 3;
+
+  @include small-tablet {
+    padding: 20px 0;
+  }
 
   &__container {
     display: flex;
     gap: 20px;
     justify-content: space-between;
+
+    @include small-tablet {
+      flex-direction: column;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 35px;
+    }
   }
 
   &__logo {
@@ -14,6 +28,15 @@
     margin-bottom: 12px;
     width: 220px;
     height: 80px;
+
+    @include tablet {
+      height: 62px;
+    }
+
+    @include small-tablet {
+      width: 165px;
+      height: 60px;
+    }
 
     img {
       width: 100%;
@@ -34,10 +57,35 @@
     font-weight: 600;
     font-size: 40px;
     color: #fff;
+
+    @include tablet {
+      font-size: 30px;
+    }
+
+    @include small-tablet {
+      font-size: 24px;
+    }
   }
 
   &__copy {
     color: rgba(255, 255, 255, 0.7);
+
+    a {
+      color: inherit;
+    }
+
+    @include small-tablet {
+      display: none;
+    }
+
+    &--mob {
+      display: none;
+      text-align: center;
+
+      @include small-tablet {
+        display: block;
+      }
+    }
   }
 
   &__row {
@@ -45,6 +93,10 @@
     justify-content: space-between;
     align-items: flex-start;
     gap: 160px;
+
+    @include small-tablet {
+      gap: 20px;
+    }
   }
 
   &__email {
@@ -104,5 +156,13 @@
 
   &__link {
     color: #fff;
+
+    @include small-tablet {
+      font-size: 20px;
+    }
+
+    @include mobile {
+      font-size: 20px;
+    }
   }
 }

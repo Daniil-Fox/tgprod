@@ -116,6 +116,10 @@ a {
   text-align: center;
   color: #fff;
 
+  @include tablet {
+    font-size: 20px;
+  }
+
   &--blue {
     background: #0a90f1;
   }
@@ -128,6 +132,14 @@ a {
   font-size: 54px;
   text-transform: uppercase;
   color: #0a90f1;
+
+  @include tablet {
+    font-size: 48px;
+  }
+
+  @include small-tablet {
+    font-size: 32px;
+  }
 }
 
 .title3 {
@@ -142,4 +154,12 @@ a {
   font-weight: 400;
   font-size: 24px;
   color: #2c281f;
+
+  @include tablet {
+    font-size: 20px;
+  }
+
+  @include small-tablet {
+    font-size: 16px;
+  }
 }
