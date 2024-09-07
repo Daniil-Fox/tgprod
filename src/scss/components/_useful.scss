@@ -24,6 +24,13 @@
     background-color: #fff;
     padding: 12px;
     border-radius: 30px;
+    outline: 2px solid transparent;
+    outline-offset: -2px;
+    transition: .3s ease-out;
+
+    @include hover {
+      outline-color: #0a90f1;
+    }
   }
 
   &__control {

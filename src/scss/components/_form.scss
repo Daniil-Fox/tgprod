@@ -64,6 +64,37 @@
     box-shadow: 0 1px rgba(#000, 0.4);
   }
 
+  .select2-container {
+    width: 100% !important;
+
+    .selection {
+      display: block;
+      height: 56px;
+      background: #f7f7f7;
+      border-radius: 10px;
+      padding: 16px 32px;
+      border: none;
+      box-shadow: 0 1px rgba(#000, 0.4);
+    }
+
+  }
+
+  .select2-container--default .select2-selection--single {
+    border: none;
+    background: none;
+  }
+
+  .select2-container--default .select2-selection--single .select2-selection__rendered {
+    padding: 0;
+  }
+
+  .select2-container--default .select2-selection--single .select2-selection__arrow {
+    top: 50%;
+    transform: translateY(-50%);
+    right: 32px;
+
+  }
+
   &__check {
     &>label {
       display: flex;

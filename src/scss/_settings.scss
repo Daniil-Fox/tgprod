@@ -107,7 +107,7 @@ a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: #2c281f;
+  background-color: #2c281f;
 
   font-weight: 700;
   font-size: 24px;
@@ -115,13 +115,22 @@ a {
   text-transform: uppercase;
   text-align: center;
   color: #fff;
+  transition: .3s ease-out;
 
   @include tablet {
     font-size: 20px;
   }
 
+  @include hover {
+    background-color: #0a90f1;
+  }
+
   &--blue {
-    background: #0a90f1;
+    background-color: #0a90f1;
+
+    @include hover {
+      background-color: #2c281f;
+    }
   }
 }
 
@@ -162,4 +171,13 @@ a {
   @include small-tablet {
     font-size: 16px;
   }
+}
+
+.just-validate-error-label {
+  display: none !important;
+}
+
+.just-validate-error-field,
+.just-validate-error-field+.select2 {
+  outline: 1px solid rgb(254, 118, 118) !important;
 }

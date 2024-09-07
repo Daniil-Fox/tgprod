@@ -12,5 +12,9 @@
     text-transform: uppercase;
     text-align: center;
     color: #0a90f1;
+
+    @include hover {
+      text-decoration: underline;
+    }
   }
 }
